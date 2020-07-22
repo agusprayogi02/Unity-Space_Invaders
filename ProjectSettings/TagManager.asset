@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Bullet
+  - Aliens
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - SpaceShip
   - Wall
   - Bullet
-  - 
+  - Aliens
   - 
   - 
   - 

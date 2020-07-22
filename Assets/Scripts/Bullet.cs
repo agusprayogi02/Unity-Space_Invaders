@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Bullet : MonoBehaviour
         }
         else if (coll.tag == "Aliens")
         {
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDies);
+            IncreaseTextUIScore();
             Destroy(gameObject);
         }
     }
@@ -28,5 +31,13 @@ public class Bullet : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+    void IncreaseTextUIScore()
+    {
+        var UiText = GameObject.Find("Score").GetComponent<Text>();
+        int score = int.Parse(UiText.text);
+        score += 10;
+        UiText.text = score.ToString();
     }
 }

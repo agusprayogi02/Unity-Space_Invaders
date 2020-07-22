@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public SoundManager Instance = null;
+    public static SoundManager Instance = null;
 
     public AudioClip alienBuzz1;
     public AudioClip alienBuzz2;
